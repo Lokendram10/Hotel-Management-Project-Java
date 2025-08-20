@@ -1,6 +1,6 @@
-services: 
-app:
-build: .
-   ports:
-      - "81:81"      
+services:
+  app:
+    build: .
+    ports:
+      - "81:81"
     restart: unless-stopped
