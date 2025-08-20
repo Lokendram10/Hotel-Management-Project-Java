@@ -1,6 +1,6 @@
-service: 
+services: 
 app:
 build: .
 
    port:
-   -"81:81"
+   - "81:81"
