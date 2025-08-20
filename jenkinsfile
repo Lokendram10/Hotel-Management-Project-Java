@@ -1,0 +1,26 @@
+pipeline{
+    agent {label 'loki'}
+         stages{ 
+            stage('cloning'){
+              steps{
+               echo 'cloning github repo'
+                git branch: 'master' , url: 'https://github.com/Lokendram10/Hotel-Management-Project-Java.git'
+               } 
+             }
+
+           stage('build'){
+              steps{
+              echo'creating image'
+              sh' docker build  -t hotel-management .'
+           } 
+            }
+              stage('deploy'){
+              steps{
+               echo'deploying'
+               sh'docker compose up -d --build'
+           } 
+            }
+
+
+         }
+}
