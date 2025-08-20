@@ -2,5 +2,5 @@ services:
 app:
 build: .
 
-   port:
+   ports:
    - "81:81"
