@@ -1,0 +1,6 @@
+service: 
+app:
+build: .
+
+   port:
+   - "81:81"
