@@ -1,5 +1,5 @@
 services: 
 app:
-build: .
-  ports: # Line 5
-      - "81:81" 
+   ports:
+      - "81:81"      
+    restart: unless-stopped
